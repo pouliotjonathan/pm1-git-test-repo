@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/icon-git.svg" type="image/svg">
+    <title>Aide mémoire des commandes de base Git</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Madimi+One&display=swap');
+
+        /** Variables **/
+        :root {
+            --bg-color: #222;
+            --text-color: #f5f5f5;
+            --code-bg-color: #424242;
+            --footer-color: #616161;
+            --main-width: 1024px;
+        }
+
+        /** General **/
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: 16px;
+            font-size: 1em;
+            font-size: 1rem;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Madimi One", Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        /** Utilities **/
+        .command {
+            font-family: "Inconsolata", monospace;
+            background-color: var(--code-bg-color);
+            padding: .75em;
+            border: 1px solid var(--text-color);
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .reverse .wrapper {
+            margin-left: 2em;
+        }
+
+        article:not(.reverse) .wrapper {
+            margin-right: 2em;
+        }
+
+        /** Core **/
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        header {
+            padding: 1em;
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        header img#favicon-logo {
+            max-width: 128px;
+        }
+
+        main {
+            /* Push the footer to the bottom of the page if not enough content */
+            flex: 1;
+            max-width: var(--main-width);
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        main article {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin: 2em 0;
+        }
+
+        main article p {
+            margin: 1em auto;
+        }
+
+        main article aside {
+            flex-basis: 30%;
+        }
+
+        footer {
+            background-color: var(--footer-color);
+            text-align: center;
+            padding: 1em;
+            font-size: .85rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="favicon-logo" src="assets/images/icon-git.svg" alt="Icône officiel de Git">
+        <h1>Aide mémoire des commandes de base Git</h1>
+    </header>
+    <main>
+        <article id="clone">
+            <div class="wrapper">
+                <h2>Cloner un <em>repo</em></h2>
+                <p>Cloner un <em>repo Git</em> permet de créer une copie exacte d'un <em>repo remote</em>(distant) sur
+                    votre
+                    machine locale.</p>
+                <blockquote class="command">git clone REPO_URL</blockquote>
+            </div>
+            <aside>
+                <img src="assets/images/clone.png" alt="Action Clone de VSCode">
+            </aside>
+        </article>
+
+        <article id="commit" class="reverse">
+            <div class="wrapper">
+                <h2>Commit</h2>
+                <p>Cloner un <em>repo Git</em> permet de créer une copie exacte d'un <em>repo remote</em>(distant) sur
+                    votre
+                    machine locale.</p>
+                <blockquote class="command">git clone REPO_URL</blockquote>
+            </div>
+            <aside>
+                <img src="assets/images/clone.png" alt="Action Clone de VSCode">
+            </aside>
+        </article>
+    </main>
+    <footer>
+        <p>Tous droits réservés &copy; TIM Matane - 2024</p>
+    </footer>
+
+</body>
+
+</html>
