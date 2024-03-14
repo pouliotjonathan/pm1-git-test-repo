@@ -2,13 +2,13 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/icon-git.svg" type="image/svg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/icon-git.svg" type="image/svg" />
     <title>Aide mémoire des commandes de base Git</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Madimi+One&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Madimi+One&display=swap");
 
         /** Variables **/
         :root {
@@ -37,7 +37,6 @@
             font-size: 1rem;
         }
 
-
         h1,
         h2,
         h3,
@@ -52,11 +51,20 @@
             width: 100%;
         }
 
+        ul {
+            list-style-type: square;
+        }
+
+        ul li {
+            margin-left: 1em;
+            line-height: 1.5;
+        }
+
         /** Utilities **/
         .command {
             font-family: "Inconsolata", monospace;
             background-color: var(--code-bg-color);
-            padding: .75em;
+            padding: 0.75em;
             border: 1px solid var(--text-color);
         }
 
@@ -71,6 +79,10 @@
 
         article:not(.reverse) .wrapper {
             margin-right: 2em;
+        }
+
+        .left-aligned {
+            text-align: left;
         }
 
         /** Core **/
@@ -111,54 +123,74 @@
         }
 
         main article aside {
-            flex-basis: 30%;
+            flex-basis: 25%;
+            flex-grow: 1;
         }
 
         footer {
             background-color: var(--footer-color);
             text-align: center;
             padding: 1em;
-            font-size: .85rem;
+            font-size: 0.85rem;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <img id="favicon-logo" src="assets/images/icon-git.svg" alt="Icône officiel de Git">
+        <img id="favicon-logo" src="assets/images/icon-git.svg" alt="Icône officiel de Git" />
         <h1>Aide mémoire des commandes de base Git</h1>
     </header>
     <main>
         <article id="clone">
             <div class="wrapper">
-                <h2>Cloner un <em>repo</em></h2>
-                <p>Cloner un <em>repo Git</em> permet de créer une copie exacte d'un <em>repo remote</em>(distant) sur
-                    votre
-                    machine locale.</p>
+                <h2>
+                    Cloner un
+                    <em>repo</em>
+                </h2>
+                <p>
+                    Cloner un <em>repo Git</em> permet de créer une copie exacte d'un <em>repo remote</em> (distant) sur
+                    votre machine locale.
+                </p>
                 <blockquote class="command">git clone REPO_URL</blockquote>
+                <p>Remplacer <strong>REPO_URL</strong> par l'adresse de votre <em>repo</em>.</p>
             </div>
             <aside>
-                <img src="assets/images/clone.png" alt="Action Clone de VSCode">
+                <a href="assets/images/clone.png">
+                    <img src="assets/images/clone.png" alt="Action Clone de VSCode" />
+                </a>
             </aside>
         </article>
 
         <article id="commit" class="reverse">
             <div class="wrapper">
                 <h2>Commit</h2>
-                <p>Cloner un <em>repo Git</em> permet de créer une copie exacte d'un <em>repo remote</em>(distant) sur
-                    votre
-                    machine locale.</p>
-                <blockquote class="command">git clone REPO_URL</blockquote>
+                <p>
+                    L'opération
+                    <strong>Commit</strong>
+                    permet de renseigner les modifications apportées au code.
+                </p>
+                <blockquote class="command">
+                    git commit -m "Message à renseigner en lien avec la modification"
+                </blockquote>
+                <p>Vous remarquerez, avec le temps, que certains utilisent des conventions d'écriture.</p>
+                <div class="left-aligned">
+                    <p>Par exemple, si le <strong>commit</strong> est:</p>
+                    <ul>
+                        <li>un ajout de code, on préfixe par ADD</li>
+                        <li>une correction de bogue, on préfixe par FIX</li>
+                        <li>un travail en cours, on préfixe par WIP</li>
+                    </ul>
+                </div>
             </div>
             <aside>
-                <img src="assets/images/clone.png" alt="Action Clone de VSCode">
+                <img src="assets/images/clone.png" alt="Action Clone de VSCode" />
             </aside>
         </article>
     </main>
     <footer>
         <p>Tous droits réservés &copy; TIM Matane - 2024</p>
     </footer>
-
 </body>
 
 </html>
