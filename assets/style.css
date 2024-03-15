@@ -82,6 +82,7 @@ article:not(.reverse) .wrapper {
   color: black;
   padding: 1em;
   font-weight: bold;
+  text-align: center;
 }
 
 /** Core **/
